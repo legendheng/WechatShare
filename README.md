@@ -136,11 +136,11 @@ public function fenxiang(){
 <script>  
 
     wx.config({  
-        debug: false, // 是否开启调试模式  
-        appId: '{$wxconfig["appId"]}', // 必填，微信号AppID  
-        timestamp: '{$wxconfig["timestamp"]}', // 必填，生成签名的时间戳  
-        nonceStr: '{$wxconfig["nonceStr"]}', // 必填，生成签名的随机串  
-        signature: '{$wxconfig["signature"]}',// 必填，签名，见附录1  
+        debug: false, // 是否开启调试模式，这个很有用，分享不成功是可以开启看看什么问题
+        appId: '{$wxconfig["appId"]}', // 必填，微信号AppID  
+        timestamp: '{$fenxiang["timestamp"]}', // 必填，生成签名的时间戳  
+        nonceStr: '{$fenxiang["nonceStr"]}', // 必填，生成签名的随机串  
+        signature: '{$fenxiang["signature"]}',// 必填，签名，见附录1  
         jsApiList: [
         'onMenuShareTimeline', //分享到朋友圈  
         'onMenuShareAppMessage', //分享给朋友  
