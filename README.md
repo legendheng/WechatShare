@@ -42,21 +42,56 @@ public function fenxiang(){
     wx.ready(function(){  
         var options = {  
             title: '点开看看呗', // 分享标题  
-            link: 'http://www.test.com/test/index.php/Home/wechat/fenxiang', // 分享链接，记得使用绝对路径，不能用document.URL
-            imgUrl: 'http://wx.qlogo.cn/mmopen/vi_32/rKziaiauzDTSYzLUR7lMIY0c7LibwrNMUoBicU8yC9rPjJWibz5MMTVXciaHmMvXWoYiaakHn7fMt9GvmAeLSpFAeo8WQ/0', // 分享图标，记得使用绝对路径  
+            link: 'http://www.test.com/test/index.php/Home/wechat/fenxiang', // 注意这里的url必须是微信公众号配置js域名的目录下，否则即使提示分享成功，但图片、标题、链接都不能生效
+            imgUrl: 'http://wx.qlogo.cn/mmopen/vi_32/rKziaiauzDTSYzLUR7lMIY0c7LibwrNMUoBicU8yC9rPjJWibz5MMTVXciaHmMvXWoYiaakHn7fMt9GvmAeLSpFAeo8WQ/0', // 分享图标，记得使用绝对路径  
             desc: '测试', // 分享描述  
             success: function () {  
-                console.info('分享成功！');  
-                // 用户确认分享后执行的回调函数  
+              alert("分享成功");
             },  
             cancel: function () {  
-                console.info('取消分享！');  
-                // 用户取消分享后执行的回调函数  
+               
             }  
         }  
         wx.onMenuShareTimeline(options); // 分享到朋友圈  
         wx.onMenuShareAppMessage(options); // 分享给朋友  
         wx.onMenuShareQQ(options); // 分享到QQ  
     });  
+      wx.ready(function () {
+         wx.onMenuShareTimeline({
+             title: '测试', // 分享标题
+            link: 'http://www.test.com/test/index.php/Home/wechat/fenxiang', // 注意这里的url必须是微信公众号配置js域名的目录下，否则即使提示分享成功，但图片、标题、链接都不能生效
+             imgUrl: 'http://wx.qlogo.cn/mmopen/vi_32/rKziaiauzDTSYzLUR7lMIY0c7LibwrNMUoBicU8yC9rPjJWibz5MMTVXciaHmMvXWoYiaakHn7fMt9GvmAeLSpFAeo8WQ/0', // 分享图标，记得使用绝对路径
+             desc: '测试分享功能', // 分享描述
+             success: function () {
+               alert("分享成功");
+            },
+            cancel: function () {
+            }
+         });
+         //分享给朋友
+         wx.onMenuShareAppMessage({
+             title: '测试', // 分享标题
+            link: 'http://www.test.com/test/index.php/Home/wechat/fenxiang', // 注意这里的url必须是微信公众号配置js域名的目录下，否则即使提示分享成功，但图片、标题、链接都不能生效
+             imgUrl: 'http://wx.qlogo.cn/mmopen/vi_32/rKziaiauzDTSYzLUR7lMIY0c7LibwrNMUoBicU8yC9rPjJWibz5MMTVXciaHmMvXWoYiaakHn7fMt9GvmAeLSpFAeo8WQ/0', // 分享图标，记得使用绝对路径
+             desc: '测试分享功能', // 分享描述
+            success: function () {
+                alert("分享成功");
+            },
+            cancel: function () {
+            }
+         });
+
+         wx.onMenuShareQQ({
+             title: '测试', // 分享标题
+            link: 'http://www.test.com/test/index.php/Home/wechat/fenxiang', // 注意这里的url必须是微信公众号配置js域名的目录下，否则即使提示分享成功，但图片、标题、链接都不能生效
+             imgUrl: 'http://wx.qlogo.cn/mmopen/vi_32/rKziaiauzDTSYzLUR7lMIY0c7LibwrNMUoBicU8yC9rPjJWibz5MMTVXciaHmMvXWoYiaakHn7fMt9GvmAeLSpFAeo8WQ/0', // 分享图标，记得使用绝对路径
+             desc: '测试分享功能', // 分享描述
+            success: function () {
+                alert("分享成功");
+            },
+            cancel: function () {
+            }
+         });
+     });
 </script>  
 ```
