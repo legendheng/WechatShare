@@ -1,4 +1,4 @@
-# Thinkphp3.2-WechatShare
+# WechatShare
 thinkphp3.2结合微信公众号的分享接口实现朋友、朋友圈的分享（这里是用测试号为例子）
 ### 第一步、解压jssdk文件，里面有三个文件，把jssdk.class.php放在Thinkphp\Library\Org\Util目录下
 ### 第二步、把剩下的access_token.txt和jsapi_ticket.txt放在Public\Home\jssdk目录下(本例子为示范),目的是记录token值和ticket值
